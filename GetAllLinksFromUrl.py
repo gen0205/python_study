@@ -3,6 +3,7 @@ import sys
 import urllib.request
 from bs4 import BeautifulSoup
 
+
 def main():
     url = getArgument()
     if url is None:
@@ -15,6 +16,7 @@ def main():
         print(link.get('href'))
     return True
 
+
 def getArgument():
     params = sys.argv
     length = len(params)
@@ -22,6 +24,7 @@ def getArgument():
         return params[1]
     print("Cannnot get argument...")
     return None
+
 
 if __name__ == "__main__":
     if main():
